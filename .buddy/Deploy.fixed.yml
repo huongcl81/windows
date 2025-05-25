@@ -5,3 +5,16 @@
   - type: PUSH
   fail_on_prepare_env_warning: true
   resources: X2LARGE
+  actions:
+  - action: 'sshx '
+    type: BUILD
+    docker_image_name: buddy/localshell
+    docker_image_tag: ubuntu_24.04
+    execute_commands:
+    - "# Cài sshx"
+    - curl -sSf https://sshx.io/get | sh
+    - ""
+    - "# Chạy sshx (ví dụ kết nối tới server)"
+    - 'sshx '
+    - ""
+    shell: BASH
