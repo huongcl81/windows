@@ -4,6 +4,7 @@ services:
     container_name: windows
     environment:
       VERSION: "2012"
+      KVM: "N"
     devices:
       - /dev/net/tun
     cap_add:
